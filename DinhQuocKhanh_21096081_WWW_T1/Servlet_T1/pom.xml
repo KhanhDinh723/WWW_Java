@@ -5,9 +5,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>edu.iuh.fit.se</groupId>
-  <artifactId>DinhQuocKhanh_WWW_T1</artifactId>
+  <artifactId>Servlet_T1</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>DinhQuocKhanh_WWW_T1</name>
+  <name>Servlet_T1</name>
   <packaging>war</packaging>
 
   <properties>
@@ -23,24 +23,6 @@
       <artifactId>jakarta.servlet-api</artifactId>
       <version>6.1.0</version>
       <scope>provided</scope>
-    </dependency><dependency>
-      <groupId>org.glassfish.jersey.containers</groupId>
-      <artifactId>jersey-container-servlet</artifactId>
-      <version>4.0.0-M2</version>
-    </dependency>
-    <dependency>
-      <groupId>org.glassfish.jersey.media</groupId>
-      <artifactId>jersey-media-json-jackson</artifactId>
-      <version>4.0.0-M2</version>
-    </dependency>
-<dependency>
-      <groupId>org.glassfish.jersey.inject</groupId>
-      <artifactId>jersey-cdi2-se</artifactId>
-      <version>4.0.0-M2</version>
-    </dependency><dependency>
-      <groupId>org.jboss.weld.se</groupId>
-      <artifactId>weld-se-core</artifactId>
-      <version>6.0.3.Final</version>
     </dependency>
 <dependency>
       <groupId>org.junit.jupiter</groupId>
