@@ -11,7 +11,7 @@ import java.util.Date;
  * Date:   8/28/2025
  * Time:   7:26 PM
  */
-@WebFilter("/*") // áp dụng cho tất cả request
+@WebFilter("/hello-servlet")
 public class LoggingFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {

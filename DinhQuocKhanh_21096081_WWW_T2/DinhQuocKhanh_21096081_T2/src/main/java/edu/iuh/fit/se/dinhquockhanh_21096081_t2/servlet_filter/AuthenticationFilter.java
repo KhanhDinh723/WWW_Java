@@ -11,7 +11,7 @@ import java.io.PrintWriter;
  * Author: Khánh Đinh
  * Date:   8/28/2025
  * Time:   7:51 PM
- */@WebFilter("/hello-servlet") // chỉ cho HelloServlet đi qua
+ */@WebFilter("/hello-servlet") // chỉ cho  đi qua
 public class AuthenticationFilter implements Filter {
 
     @Override
