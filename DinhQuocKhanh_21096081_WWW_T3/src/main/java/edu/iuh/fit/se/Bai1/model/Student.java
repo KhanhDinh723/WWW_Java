@@ -1,12 +1,12 @@
-package edu.iuh.fit.se.bai1.model;
+package edu.iuh.fit.se.Bai1.model;
 
 import java.time.LocalDate;
 import java.util.List;
 
 /**
  * Author: Khánh Đinh
- * Date:   9/4/2025
- * Time:   7:00 PM
+ * Date:   9/11/2025
+ * Time:   3:01 PM
  */
 public class Student {
     private String firstName;

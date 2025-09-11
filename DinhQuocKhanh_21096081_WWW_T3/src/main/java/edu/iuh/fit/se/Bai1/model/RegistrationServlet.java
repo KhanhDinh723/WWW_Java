@@ -1,4 +1,4 @@
-package edu.iuh.fit.se.bai1;
+package edu.iuh.fit.se.Bai1.model;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -7,15 +7,14 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.time.LocalDate;
 import java.util.List;
 
 /**
  * Author: Khánh Đinh
- * Date:   9/4/2025
- * Time:   7:45 PM
+ * Date:   9/11/2025
+ * Time:   3:04 PM
  */
-@WebServlet("/registration-form")
+@WebServlet ("/registration-form")
 public class RegistrationServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -31,7 +30,7 @@ public class RegistrationServlet extends HttpServlet {
 
     }
 
-//    public Student(String firstName, String lastName, LocalDate dateOfBirth, String email, String phoneNumber, String gender, String address, String city, int pinCode, String state, String country, List<String> hobbies, String classXBoard, double classXPercentage, int classXYearOfPassing, String classXIIBoard, double classXIIPercentage, int classXIIYearOfPassing, String graduationBoard, double graduationPercentage, int graduationYearOfPassing, String masterBoard, double masterPercentage, int masterYearOfPassing, String courseAppliedFor) {
+    //    public Student(String firstName, String lastName, LocalDate dateOfBirth, String email, String phoneNumber, String gender, String address, String city, int pinCode, String state, String country, List<String> hobbies, String classXBoard, double classXPercentage, int classXYearOfPassing, String classXIIBoard, double classXIIPercentage, int classXIIYearOfPassing, String graduationBoard, double graduationPercentage, int graduationYearOfPassing, String masterBoard, double masterPercentage, int masterYearOfPassing, String courseAppliedFor) {
 //        this.firstName = firstName;
 //        this.lastName = lastName;
 //        this.dateOfBirth = dateOfBirth;
@@ -96,5 +95,5 @@ public class RegistrationServlet extends HttpServlet {
 
     }
 
-    
+
 }
