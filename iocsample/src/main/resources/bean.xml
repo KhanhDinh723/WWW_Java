@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student" class="edu.iuh.fit.se.iocsample.Student">
+        <!-- collaborators and configuration for this bean go here -->
+        <property name="id" value="name"="1"></property>
+        <property name="name" value="name"="Khánh"></property>
+    </bean>
+
+    <bean id="student3" class="edu.iuh.fit.se.iocsample.Student">
+        <!-- collaborators and configuration for this bean go here -->
+
+    <constructor-agr name = "id", value = "3"></constructor-agr>
+    </bean>
+
+    <!-- more bean definitions go here -->
+
+</beans>
