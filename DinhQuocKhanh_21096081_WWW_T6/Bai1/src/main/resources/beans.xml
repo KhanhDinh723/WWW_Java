@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+    <!-- bean definitions here -->
+
+    <bean id="address1" class="iuh.fit.se.bai1.model.Address">
+        <property name="street" value="Nguyễn Văn Bảo"/>
+        <property name="city" value="Hồ Chí Minh"/>
+        <property name="country" value="Việt Nam"/>
+
+    </bean>
+
+    <bean id="address2" class="iuh.fit.se.bai1.model.Address">
+        <property name="street" value="Lê Văn Sỹ"/>
+        <property name="city" value="Hồ Chí Minh"/>
+        <property name="country" value="Việt Nam"/>
+    </bean>
+    <!-- Define Person bean with Collection Injection -->
+    <bean id="person" class="iuh.fit.se.bai1.model.Person">
+        <property name="name" value="Đinh Quốc Khánh"/>
+        <property name="age" value="22"/>
+        <property name="addresses">
+            <list>
+                <ref bean="address1"/>
+                <ref bean="address2"/>
+            </list>
+        </property>
+        <property name="emails">
+            <list>
+                <value>khanhacademic723@gmail.com</value>
+                <value>kiomatnet123@gmail.com</value>
+            </list>
+        </property>
+
+
+    </bean>
+</beans>
