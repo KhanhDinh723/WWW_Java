@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/4.0.0/mini-default.min.css">
+    <style>
+        .board { max-width:1050px; margin:18px auto 32px; background:#fff; border:1px solid #d8d8d8; border-radius:6px; box-shadow:0 1px 2px rgba(0,0,0,.04); padding:12px 16px 18px; }
+        .title { text-align:center; font-weight:700; letter-spacing:.5px; margin:8px 0 18px; }
+        .toolbar{ display:flex; justify-content:flex-end; align-items:center; gap:8px; margin-bottom:10px; }
+        .toolbar input{ width:240px; height:28px; padding:4px 8px; border:1px solid #ccc; border-radius:4px; }
+        table.emp{ width:100%; border-collapse:collapse; text-align:center; }
+        table.emp thead th{ font-weight:700; border-bottom:1px solid #ddd; padding:10px 6px; }
+        table.emp tbody td{ padding:10px 6px; border-bottom:1px solid #eee; vertical-align:middle; }
+        .pager{ text-align:center; margin-top:8px; }
+    </style>
+</head>
+<body>
+<div class="board">
+    <h2 class="title">EMPLOYEE LIST</h2>
+
+    <form class="toolbar" method="get" th:action="@{/employees}">
+        <input type="text" name="q" th:value="${q}" placeholder="Search by name or email"/>
+        <button type="submit">Search</button>
+        <a class="button primary" th:href="@{/employees/new}">Add Employee</a>
+    </form>
+
+    <table class="emp">
+        <thead>
+        <tr>
+            <th>First Name</th><th>Last Name</th><th>Gender</th>
+            <th>Date of birth</th><th>Email</th><th>Phone</th><th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="e : ${page.content}">
+            <td th:text="${e.firstName}">First</td>
+            <td th:text="${e.lastName}">Last</td>
+            <td th:text="${e.gender}">male</td>
+            <td th:text="${#temporals.format(e.dateOfBirth, 'dd/MM/yyyy')}">01/01/2000</td>
+            <td th:text="${e.email}">a@b.co</td>
+            <td th:text="${e.phone}">(000)</td>
+            <td>
+                <a th:href="@{'/employees/edit/' + ${e.id}}">Update</a> |
+                <a th:href="@{'/employees/delete/' + ${e.id}}"
+                   onclick="return confirm('Delete this employee?')">Delete</a>
+            </td>
+        </tr>
+        <tr th:if="${page.totalElements == 0}">
+            <td colspan="7"><i>No employees found</i></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="pager">
+        <a th:if="${!page.first}" th:href="@{/employees(page=${page.number-1}, q=${q})}">Prev</a>
+        <span style="margin:0 8px" th:text="${page.number + 1} + ' / ' + ${page.totalPages}">1 / 1</span>
+        <a th:if="${!page.last}" th:href="@{/employees(page=${page.number+1}, q=${q})}">Next</a>
+    </div>
+</div>
+
+<footer class="container"><hr/><small>IUH • Lab 8</small></footer>
+</body>
+</html>

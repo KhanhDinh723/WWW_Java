@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${employee.id} == null ? 'Registration Employee' : 'Update Employee'">Employee</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/4.0.0/mini-default.min.css">
+    <style>
+        .wrap{max-width:760px;margin:18px auto}
+        h1{font-weight:800;text-align:center;letter-spacing:2px;line-height:1.1;text-transform:uppercase}
+        .btns{margin-top:12px}
+    </style>
+</head>
+<body>
+<section class="card wrap">
+    <h1 th:text="${employee.id} == null ? 'Registration\nEmployee' : 'Update\nEmployee'">REGISTRATION EMPLOYEE</h1>
+
+    <!-- lỗi tổng -->
+    <div th:if="${#fields.hasAnyErrors()}" style="color:#b00020;margin:8px 0">
+        <ul><li th:each="e : ${#fields.errors('*')}" th:text="${e}"></li></ul>
+    </div>
+
+    <form th:action="@{/employees}" th:object="${employee}" method="post">
+        <input type="hidden" th:field="*{id}"/>
+
+        <label>First Name</label>
+        <input th:field="*{firstName}" placeholder="First Name"/>
+        <small class="error" th:errors="*{firstName}"></small>
+
+        <label>Last Name</label>
+        <input th:field="*{lastName}" placeholder="Last Name"/>
+        <small class="error" th:errors="*{lastName}"></small>
+
+        <label>Email</label>
+        <input th:field="*{email}" placeholder="Email"/>
+        <small class="error" th:errors="*{email}"></small>
+
+        <label>Date of Birth</label>
+        <input type="date" th:field="*{dateOfBirth}"/>
+        <small class="error" th:errors="*{dateOfBirth}"></small>
+
+        <label>Phone number</label>
+        <input th:field="*{phone}" placeholder="Phone number"/>
+
+        <label>Gender</label>
+        <div>
+            <label><input type="radio" th:field="*{gender}" value="male"/> Male</label>
+            <label><input type="radio" th:field="*{gender}" value="female"/> Female</label>
+            <small class="error" th:errors="*{gender}"></small>
+        </div>
+
+        <label>Address</label>
+        <input th:field="*{address}" placeholder="Address"/>
+
+        <div class="btns">
+            <a class="button secondary" th:href="@{/employees}">Back</a>
+            <button class="button primary" type="submit"
+                    th:text="${employee.id} == null ? 'Register' : 'Update'">Register</button>
+        </div>
+    </form>
+</section>
+</body>
+</html>
