@@ -1,1048 +1,148 @@
-2025-10-26T07:56:05.126+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [restartedMain] i.f.s.SpringRestApiHasDtoDemoApplication : Starting SpringRestApiHasDtoDemoApplication using Java 17.0.13 with PID 66345 (/Users/thoaha/Documents/Lecture/HK1_2025_2026/LTPT_Java/Demo/Chapter6/SpringRestAPIHasDTODemo/target/classes started by thoaha in /Users/thoaha/Documents/Lecture/HK1_2025_2026/LTPT_Java/Demo/Chapter6/SpringRestAPIHasDTODemo)
-2025-10-26T07:56:05.127+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [restartedMain] i.f.s.SpringRestApiHasDtoDemoApplication : No active profile set, falling back to 1 default profile: "default"
-2025-10-26T07:56:05.143+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-10-26T07:56:05.143+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-10-26T07:56:05.489+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-26T07:56:05.508+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 2 JPA repository interfaces.
-2025-10-26T07:56:05.692+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2025-10-26T07:56:05.699+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-26T07:56:05.699+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
-2025-10-26T07:56:05.717+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
-2025-10-26T07:56:05.717+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 574 ms
-2025-10-26T07:56:05.931+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-26T07:56:05.944+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-26T07:56:05.985+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@2858bd59
-2025-10-26T07:56:05.986+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-26T07:56:06.324+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-26T07:56:06.416+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-10-26T07:56:06.654+07:00  WARN 66345 --- [SpringRestAPIHasDTODemo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-26T07:56:06.691+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 12 mappings in 'requestMappingHandlerMapping'
-2025-10-26T07:56:06.721+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2025-10-26T07:56:06.731+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2025-10-26T07:56:06.749+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2025-10-26T07:56:06.802+07:00  WARN 66345 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2025-10-26T07:56:06.817+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/api'
-2025-10-26T07:56:06.823+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [restartedMain] i.f.s.SpringRestApiHasDtoDemoApplication : Started SpringRestApiHasDtoDemoApplication in 1.884 seconds (process running for 2.366)
-2025-10-26T07:58:21.110+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-26T07:58:21.111+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-10-26T07:58:21.111+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2025-10-26T07:58:21.111+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
-2025-10-26T07:58:21.111+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
-2025-10-26T07:58:21.113+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6e65fee7
-2025-10-26T07:58:21.114+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@3627dd3f
-2025-10-26T07:58:21.114+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2025-10-26T07:58:21.114+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2025-10-26T07:58:21.117+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/employees", parameters={}
-2025-10-26T07:58:21.122+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(String)
-2025-10-26T07:58:21.227+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
-2025-10-26T07:58:21.227+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[iuh.fit.se.dtos.EmployeeDTO@6a54b686, iuh.fit.se.dtos.EmployeeDTO@2782dc81, iuh.f (truncated)...]
-2025-10-26T07:58:21.246+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T07:58:33.658+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/swagger-ui/swagger-initializer.js", parameters={}
-2025-10-26T07:58:33.658+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/swagger-ui/swagger-ui.css", parameters={}
-2025-10-26T07:58:33.675+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2025-10-26T07:58:33.675+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2025-10-26T07:58:33.694+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T07:58:33.698+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T07:58:33.808+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/v3/api-docs/swagger-config", parameters={}
-2025-10-26T07:58:33.808+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
-2025-10-26T07:58:33.817+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
-2025-10-26T07:58:33.821+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [{configUrl=/api/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:8081/api/swagger-ui/o (truncated)...]
-2025-10-26T07:58:33.822+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T07:58:33.828+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/v3/api-docs", parameters={}
-2025-10-26T07:58:33.829+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
-2025-10-26T07:58:34.032+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 198 ms
-2025-10-26T07:58:34.040+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, */*] and supported [application/json]
-2025-10-26T07:58:34.040+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 49, 46, 48, 34, 44, 34, 105, 110, 10 (truncated)...]
-2025-10-26T07:58:34.041+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T07:58:45.158+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/employees/employeesHasPage?page=0&size=1&sort=id,asc", parameters={masked}
-2025-10-26T07:58:45.159+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployeeById(int)
-2025-10-26T07:58:45.164+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.web.method.HandlerMethod             : Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> iuh.fit.se.controllers.EmployeeController.getEmployeeById(int): Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "employeesHasPage"
-2025-10-26T07:58:45.167+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler iuh.fit.se.exceptions.GlobalExceptionHandler#handleException(Exception, WebRequest)
-2025-10-26T07:58:45.171+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json', given [application/json] and supported [application/problem+json]
-2025-10-26T07:58:45.173+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='about:blank', title='Bad Request', status=400, detail='Failed to convert 'id' wi (truncated)...]
-2025-10-26T07:58:45.173+07:00  WARN 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "employeesHasPage"]
-2025-10-26T07:58:45.174+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
-2025-10-26T08:00:09.973+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/employees/employeesHasPage?page=0&size=1&sort=id,asc", parameters={masked}
-2025-10-26T08:00:09.975+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployeeById(int)
-2025-10-26T08:00:09.977+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-10] o.s.web.method.HandlerMethod             : Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> iuh.fit.se.controllers.EmployeeController.getEmployeeById(int): Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "employeesHasPage"
-2025-10-26T08:00:09.978+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler iuh.fit.se.exceptions.GlobalExceptionHandler#handleException(Exception, WebRequest)
-2025-10-26T08:00:09.979+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json', given [application/json] and supported [application/problem+json]
-2025-10-26T08:00:09.979+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='about:blank', title='Bad Request', status=400, detail='Failed to convert 'id' wi (truncated)...]
-2025-10-26T08:00:09.981+07:00  WARN 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "employeesHasPage"]
-2025-10-26T08:00:09.981+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
-2025-10-26T08:00:43.046+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/employeesHasPage?page=0&size=20", parameters={masked}
-2025-10-26T08:00:43.049+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(Pageable)
-2025-10-26T08:00:43.089+07:00  WARN 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
-	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
-	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
-
-2025-10-26T08:00:43.090+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
-2025-10-26T08:00:43.091+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Page 1 of 1 containing iuh.fit.se.dtos.EmployeeDTO instances]
-2025-10-26T08:00:43.095+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T08:02:04.921+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/employees/employeesHasPage?page=0&size=1&sort=id,asc", parameters={masked}
-2025-10-26T08:02:04.924+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployeeById(int)
-2025-10-26T08:02:04.928+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.web.method.HandlerMethod             : Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> iuh.fit.se.controllers.EmployeeController.getEmployeeById(int): Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "employeesHasPage"
-2025-10-26T08:02:04.928+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler iuh.fit.se.exceptions.GlobalExceptionHandler#handleException(Exception, WebRequest)
-2025-10-26T08:02:04.929+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json', given [application/json] and supported [application/problem+json]
-2025-10-26T08:02:04.930+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='about:blank', title='Bad Request', status=400, detail='Failed to convert 'id' wi (truncated)...]
-2025-10-26T08:02:04.931+07:00  WARN 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "employeesHasPage"]
-2025-10-26T08:02:04.931+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
-2025-10-26T08:02:50.571+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/employees/employeesHasPage?page=0&size=1&sort=id,asc", parameters={masked}
-2025-10-26T08:02:50.577+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployeeById(int)
-2025-10-26T08:02:50.581+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.web.method.HandlerMethod             : Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> iuh.fit.se.controllers.EmployeeController.getEmployeeById(int): Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "employeesHasPage"
-2025-10-26T08:02:50.581+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler iuh.fit.se.exceptions.GlobalExceptionHandler#handleException(Exception, WebRequest)
-2025-10-26T08:02:50.582+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json', given [application/json] and supported [application/problem+json]
-2025-10-26T08:02:50.582+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='about:blank', title='Bad Request', status=400, detail='Failed to convert 'id' wi (truncated)...]
-2025-10-26T08:02:50.583+07:00  WARN 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "employeesHasPage"]
-2025-10-26T08:02:50.583+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
-2025-10-26T08:03:15.731+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/employees/employeesHasPage?page=0&size=1&sort=id,asc", parameters={masked}
-2025-10-26T08:03:15.734+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployeeById(int)
-2025-10-26T08:03:15.736+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.web.method.HandlerMethod             : Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> iuh.fit.se.controllers.EmployeeController.getEmployeeById(int): Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "employeesHasPage"
-2025-10-26T08:03:15.737+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler iuh.fit.se.exceptions.GlobalExceptionHandler#handleException(Exception, WebRequest)
-2025-10-26T08:03:15.737+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json', given [application/json] and supported [application/problem+json]
-2025-10-26T08:03:15.738+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='about:blank', title='Bad Request', status=400, detail='Failed to convert 'id' wi (truncated)...]
-2025-10-26T08:03:15.739+07:00  WARN 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "employeesHasPage"]
-2025-10-26T08:03:15.739+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
-2025-10-26T08:03:42.462+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/employees/employeesHasPage?page=0&size=1&sort=id,asc", parameters={masked}
-2025-10-26T08:03:42.464+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployeeById(int)
-2025-10-26T08:03:42.466+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.web.method.HandlerMethod             : Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> iuh.fit.se.controllers.EmployeeController.getEmployeeById(int): Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "employeesHasPage"
-2025-10-26T08:03:42.466+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler iuh.fit.se.exceptions.GlobalExceptionHandler#handleException(Exception, WebRequest)
-2025-10-26T08:03:42.467+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json', given [application/json] and supported [application/problem+json]
-2025-10-26T08:03:42.467+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='about:blank', title='Bad Request', status=400, detail='Failed to convert 'id' wi (truncated)...]
-2025-10-26T08:03:42.468+07:00  WARN 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "employeesHasPage"]
-2025-10-26T08:03:42.468+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
-2025-10-26T08:04:00.859+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/employees/employeesHasPage?page=0&size=1&sort=id,asc", parameters={masked}
-2025-10-26T08:04:00.862+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployeeById(int)
-2025-10-26T08:04:00.867+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.web.method.HandlerMethod             : Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> iuh.fit.se.controllers.EmployeeController.getEmployeeById(int): Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "employeesHasPage"
-2025-10-26T08:04:00.868+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler iuh.fit.se.exceptions.GlobalExceptionHandler#handleException(Exception, WebRequest)
-2025-10-26T08:04:00.869+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json;q=0.8', given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/problem+json]
-2025-10-26T08:04:00.871+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='about:blank', title='Bad Request', status=400, detail='Failed to convert 'id' wi (truncated)...]
-2025-10-26T08:04:00.872+07:00  WARN 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "employeesHasPage"]
-2025-10-26T08:04:00.873+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
-2025-10-26T08:04:22.058+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/employees/employeesHasPage?page=0&size=1&sort=id,asc", parameters={masked}
-2025-10-26T08:04:22.059+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployeeById(int)
-2025-10-26T08:04:22.061+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-8] o.s.web.method.HandlerMethod             : Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> iuh.fit.se.controllers.EmployeeController.getEmployeeById(int): Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "employeesHasPage"
-2025-10-26T08:04:22.061+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler iuh.fit.se.exceptions.GlobalExceptionHandler#handleException(Exception, WebRequest)
-2025-10-26T08:04:22.062+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json;q=0.8', given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/problem+json]
-2025-10-26T08:04:22.062+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='about:blank', title='Bad Request', status=400, detail='Failed to convert 'id' wi (truncated)...]
-2025-10-26T08:04:22.063+07:00  WARN 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "employeesHasPage"]
-2025-10-26T08:04:22.063+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
-2025-10-26T08:04:26.274+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/v3/api-docs/swagger-config", parameters={}
-2025-10-26T08:04:26.275+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
-2025-10-26T08:04:26.278+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
-2025-10-26T08:04:26.278+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [{configUrl=/api/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:8081/api/swagger-ui/o (truncated)...]
-2025-10-26T08:04:26.279+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T08:04:26.286+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/v3/api-docs", parameters={}
-2025-10-26T08:04:26.287+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
-2025-10-26T08:04:26.295+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, */*] and supported [application/json]
-2025-10-26T08:04:26.295+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 49, 46, 48, 34, 44, 34, 105, 110, 10 (truncated)...]
-2025-10-26T08:04:26.296+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T08:04:42.022+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/employeesHasPage?page=0&size=20&sort=id%2Casc", parameters={masked}
-2025-10-26T08:04:42.024+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(Pageable)
-2025-10-26T08:04:42.063+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
-2025-10-26T08:04:42.063+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Page 1 of 1 containing iuh.fit.se.dtos.EmployeeDTO instances]
-2025-10-26T08:04:42.064+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T08:06:41.102+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/employees/employeesHasPage?page=0&size=1&sort=id,asc", parameters={masked}
-2025-10-26T08:06:41.104+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployeeById(int)
-2025-10-26T08:06:41.106+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.web.method.HandlerMethod             : Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> iuh.fit.se.controllers.EmployeeController.getEmployeeById(int): Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "employeesHasPage"
-2025-10-26T08:06:41.106+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler iuh.fit.se.exceptions.GlobalExceptionHandler#handleException(Exception, WebRequest)
-2025-10-26T08:06:41.107+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json', given [application/json] and supported [application/problem+json]
-2025-10-26T08:06:41.107+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='about:blank', title='Bad Request', status=400, detail='Failed to convert 'id' wi (truncated)...]
-2025-10-26T08:06:41.108+07:00  WARN 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "employeesHasPage"]
-2025-10-26T08:06:41.108+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
-2025-10-26T08:06:55.874+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/employees/employeesHasPage?page=0&size=1&sort=id,asc", parameters={masked}
-2025-10-26T08:06:55.880+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployeeById(int)
-2025-10-26T08:06:55.884+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.web.method.HandlerMethod             : Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> iuh.fit.se.controllers.EmployeeController.getEmployeeById(int): Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "employeesHasPage"
-2025-10-26T08:06:55.884+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler iuh.fit.se.exceptions.GlobalExceptionHandler#handleException(Exception, WebRequest)
-2025-10-26T08:06:55.885+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json', given [application/json] and supported [application/problem+json]
-2025-10-26T08:06:55.885+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='about:blank', title='Bad Request', status=400, detail='Failed to convert 'id' wi (truncated)...]
-2025-10-26T08:06:55.886+07:00  WARN 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "employeesHasPage"]
-2025-10-26T08:06:55.887+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
-2025-10-26T08:07:08.812+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/employees/employeesHasPage?page=0&size=1&sort=id,asc", parameters={masked}
-2025-10-26T08:07:08.814+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployeeById(int)
-2025-10-26T08:07:08.816+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.web.method.HandlerMethod             : Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> iuh.fit.se.controllers.EmployeeController.getEmployeeById(int): Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "employeesHasPage"
-2025-10-26T08:07:08.816+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler iuh.fit.se.exceptions.GlobalExceptionHandler#handleException(Exception, WebRequest)
-2025-10-26T08:07:08.816+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json', given [application/json] and supported [application/problem+json]
-2025-10-26T08:07:08.817+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='about:blank', title='Bad Request', status=400, detail='Failed to convert 'id' wi (truncated)...]
-2025-10-26T08:07:08.817+07:00  WARN 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "employeesHasPage"]
-2025-10-26T08:07:08.818+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
-2025-10-26T08:13:35.689+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/employees/employeesHasPage?page=0&size=1&sort=id,asc", parameters={masked}
-2025-10-26T08:13:35.691+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployeeById(int)
-2025-10-26T08:13:35.694+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.web.method.HandlerMethod             : Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> iuh.fit.se.controllers.EmployeeController.getEmployeeById(int): Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "employeesHasPage"
-2025-10-26T08:13:35.695+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler iuh.fit.se.exceptions.GlobalExceptionHandler#handleException(Exception, WebRequest)
-2025-10-26T08:13:35.696+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json', given [application/json] and supported [application/problem+json]
-2025-10-26T08:13:35.696+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='about:blank', title='Bad Request', status=400, detail='Failed to convert 'id' wi (truncated)...]
-2025-10-26T08:13:35.697+07:00  WARN 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "employeesHasPage"]
-2025-10-26T08:13:35.699+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
-2025-10-26T08:15:45.167+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/employeesHasPage?page=0&size=1&sort=id,asc", parameters={masked}
-2025-10-26T08:15:45.169+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(Pageable)
-2025-10-26T08:15:45.197+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
-2025-10-26T08:15:45.197+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Page 1 of 4 containing iuh.fit.se.dtos.EmployeeDTO instances]
-2025-10-26T08:15:45.198+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T08:15:47.080+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/employeesHasPage?page=1&size=1&sort=id,asc", parameters={masked}
-2025-10-26T08:15:47.081+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(Pageable)
-2025-10-26T08:15:47.092+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
-2025-10-26T08:15:47.092+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Page 2 of 4 containing iuh.fit.se.dtos.EmployeeDTO instances]
-2025-10-26T08:15:47.093+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T08:15:47.869+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/employeesHasPage?page=2&size=1&sort=id,asc", parameters={masked}
-2025-10-26T08:15:47.870+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(Pageable)
-2025-10-26T08:15:47.882+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
-2025-10-26T08:15:47.882+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Page 3 of 4 containing iuh.fit.se.dtos.EmployeeDTO instances]
-2025-10-26T08:15:47.883+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T08:15:48.625+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/employeesHasPage?page=3&size=1&sort=id,asc", parameters={masked}
-2025-10-26T08:15:48.626+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(Pageable)
-2025-10-26T08:15:48.638+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
-2025-10-26T08:15:48.638+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Page 4 of 4 containing iuh.fit.se.dtos.EmployeeDTO instances]
-2025-10-26T08:15:48.639+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T08:41:39.329+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/employeesHasPage?page=3&size=1&sort=id,asc", parameters={masked}
-2025-10-26T08:41:39.330+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(Pageable)
-2025-10-26T08:41:39.343+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
-2025-10-26T08:41:39.344+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Page 4 of 4 containing iuh.fit.se.dtos.EmployeeDTO instances]
-2025-10-26T08:41:39.345+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T08:41:41.474+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/employeesHasPage?page=2&size=1&sort=id,asc", parameters={masked}
-2025-10-26T08:41:41.474+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(Pageable)
-2025-10-26T08:41:41.485+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
-2025-10-26T08:41:41.486+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Page 3 of 4 containing iuh.fit.se.dtos.EmployeeDTO instances]
-2025-10-26T08:41:41.494+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T08:41:42.135+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/employeesHasPage?page=1&size=1&sort=id,asc", parameters={masked}
-2025-10-26T08:41:42.135+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(Pageable)
-2025-10-26T08:41:42.145+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
-2025-10-26T08:41:42.146+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Page 2 of 4 containing iuh.fit.se.dtos.EmployeeDTO instances]
-2025-10-26T08:41:42.147+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T08:41:42.784+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/employeesHasPage?page=0&size=1&sort=id,asc", parameters={masked}
-2025-10-26T08:41:42.785+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(Pageable)
-2025-10-26T08:41:42.794+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
-2025-10-26T08:41:42.795+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Page 1 of 4 containing iuh.fit.se.dtos.EmployeeDTO instances]
-2025-10-26T08:41:42.796+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T08:41:51.024+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/employees", parameters={}
-2025-10-26T08:41:51.025+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(String)
-2025-10-26T08:41:51.031+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
-2025-10-26T08:41:51.031+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[iuh.fit.se.dtos.EmployeeDTO@150a7f54, iuh.fit.se.dtos.EmployeeDTO@165e9419, iuh.f (truncated)...]
-2025-10-26T08:41:51.032+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T08:42:12.816+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/employees", parameters={}
-2025-10-26T08:42:12.819+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#saveEmployee(Employee)
-2025-10-26T08:42:12.860+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Employee [id=0, firstName=1, lastName=1, gender=male, emailAddress=1@gmail.com, phoneNumber=(123)456 (truncated)...]
-2025-10-26T08:42:12.946+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
-2025-10-26T08:42:12.946+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=iuh.fit.se.dtos.EmployeeDTO@26a117fb}]
-2025-10-26T08:42:12.947+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T08:42:12.959+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/employees", parameters={}
-2025-10-26T08:42:12.959+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(String)
-2025-10-26T08:42:12.965+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
-2025-10-26T08:42:12.965+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[iuh.fit.se.dtos.EmployeeDTO@598ddf79, iuh.fit.se.dtos.EmployeeDTO@1d32f895, iuh.f (truncated)...]
-2025-10-26T08:42:12.965+07:00 DEBUG 66345 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T08:43:32.478+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-10-26T08:43:32.483+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-10-26T08:43:32.490+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-10-26T08:43:32.508+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-10-26T08:43:32.517+07:00  INFO 66345 --- [SpringRestAPIHasDTODemo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-10-26T16:38:09.824+07:00  INFO 29460 --- [SpringRestAPIHasDTODemo] [main] .SpringRestApiHasDtoDemoApplicationTests : Starting SpringRestApiHasDtoDemoApplicationTests using Java 17.0.12 with PID 29460 (started by kioma in D:\FINAL ROUND\WWW Java\WWW_Java\SpringRestAPIHasDTODemo\SpringRestAPIHasDTODemo)
-2025-10-26T16:38:09.826+07:00  INFO 29460 --- [SpringRestAPIHasDTODemo] [main] .SpringRestApiHasDtoDemoApplicationTests : No active profile set, falling back to 1 default profile: "default"
-2025-10-26T16:38:09.880+07:00 DEBUG 29460 --- [SpringRestAPIHasDTODemo] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3ff57625
-2025-10-26T16:38:11.272+07:00  WARN 29460 --- [SpringRestAPIHasDTODemo] [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalStateException: Error processing condition on org.springdoc.webmvc.ui.SwaggerConfig.springWebProvider
-2025-10-26T16:38:11.313+07:00  INFO 29460 --- [SpringRestAPIHasDTODemo] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-10-26T16:38:11.351+07:00 ERROR 29460 --- [SpringRestAPIHasDTODemo] [main] o.s.boot.SpringApplication               : Application run failed
-
-java.lang.IllegalStateException: Error processing condition on org.springdoc.webmvc.ui.SwaggerConfig.springWebProvider
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60)
-	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:183)
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:144)
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:429)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:789)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:607)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
-	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
-	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1463)
-	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279)
-	at java.base/java.util.Optional.orElseGet(Optional.java:364)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278)
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
-	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springdoc.webmvc.ui.SwaggerConfig] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@73d16e93]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483)
-	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360)
-	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$1(AbstractAutowireCapableBeanFactory.java:750)
-	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1740)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:749)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:682)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:653)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1687)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:562)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:534)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:247)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:240)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:230)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:183)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:158)
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
-	... 95 common frames omitted
-Caused by: java.lang.NoClassDefFoundError: org/springframework/web/servlet/resource/LiteWebJarsResourceResolver
-	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
-	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1017)
-	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
-	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
-	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402)
-	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504)
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465)
-	... 111 common frames omitted
-Caused by: java.lang.ClassNotFoundException: org.springframework.web.servlet.resource.LiteWebJarsResourceResolver
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
-	... 124 common frames omitted
-
-2025-10-26T16:38:11.374+07:00  WARN 29460 --- [SpringRestAPIHasDTODemo] [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [iuh.fit.se.SpringRestApiHasDtoDemoApplicationTests@44a085e5]
-
-java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@60a19573 testClass = iuh.fit.se.SpringRestApiHasDtoDemoApplicationTests, locations = [], classes = [iuh.fit.se.SpringRestApiHasDtoDemoApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1f9e9475, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@14dd7b39, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1f9f6368, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@6d5620ce, org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@7d322cad, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@61710c6, org.springframework.boot.test.context.SpringBootTestAnnotation@9b48d934], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279)
-	at java.base/java.util.Optional.orElseGet(Optional.java:364)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278)
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
-	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.lang.IllegalStateException: Error processing condition on org.springdoc.webmvc.ui.SwaggerConfig.springWebProvider
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60)
-	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:183)
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:144)
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:429)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:789)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:607)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
-	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
-	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1463)
-	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
-	... 73 common frames omitted
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springdoc.webmvc.ui.SwaggerConfig] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@73d16e93]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483)
-	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360)
-	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$1(AbstractAutowireCapableBeanFactory.java:750)
-	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1740)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:749)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:682)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:653)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1687)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:562)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:534)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:247)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:240)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:230)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:183)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:158)
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
-	... 95 common frames omitted
-Caused by: java.lang.NoClassDefFoundError: org/springframework/web/servlet/resource/LiteWebJarsResourceResolver
-	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
-	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1017)
-	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
-	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
-	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402)
-	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504)
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465)
-	... 111 common frames omitted
-Caused by: java.lang.ClassNotFoundException: org.springframework.web.servlet.resource.LiteWebJarsResourceResolver
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
-	... 124 common frames omitted
-
-2025-10-26T16:43:04.876+07:00  INFO 18044 --- [SpringRestAPIHasDTODemo] [restartedMain] i.f.s.SpringRestApiHasDtoDemoApplication : Starting SpringRestApiHasDtoDemoApplication using Java 23.0.1 with PID 18044 (D:\FINAL ROUND\WWW Java\WWW_Java\SpringRestAPIHasDTODemo\SpringRestAPIHasDTODemo\target\classes started by kioma in D:\FINAL ROUND\WWW Java\WWW_Java\SpringRestAPIHasDTODemo\SpringRestAPIHasDTODemo)
-2025-10-26T16:43:04.879+07:00  INFO 18044 --- [SpringRestAPIHasDTODemo] [restartedMain] i.f.s.SpringRestApiHasDtoDemoApplication : No active profile set, falling back to 1 default profile: "default"
-2025-10-26T16:43:04.954+07:00  INFO 18044 --- [SpringRestAPIHasDTODemo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-10-26T16:43:04.955+07:00  INFO 18044 --- [SpringRestAPIHasDTODemo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-10-26T16:43:06.014+07:00  WARN 18044 --- [SpringRestAPIHasDTODemo] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalStateException: Error processing condition on org.springdoc.webmvc.ui.SwaggerConfig.springWebProvider
-2025-10-26T16:43:06.023+07:00  INFO 18044 --- [SpringRestAPIHasDTODemo] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-10-26T16:43:06.051+07:00 ERROR 18044 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-java.lang.IllegalStateException: Error processing condition on org.springdoc.webmvc.ui.SwaggerConfig.springWebProvider
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60)
-	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:183)
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:144)
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:429)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:789)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:607)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at iuh.fit.se.SpringRestApiHasDtoDemoApplication.main(SpringRestApiHasDtoDemoApplication.java:10)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springdoc.webmvc.ui.SwaggerConfig] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@5a07e868]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483)
-	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360)
-	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$1(AbstractAutowireCapableBeanFactory.java:750)
-	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1713)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:749)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:682)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:653)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1687)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:562)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:534)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:247)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:240)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:230)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:183)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:158)
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
-	... 20 common frames omitted
-Caused by: java.lang.NoClassDefFoundError: org/springframework/web/servlet/resource/LiteWebJarsResourceResolver
-	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
-	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1026)
-	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528)
-	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
-	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3650)
-	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2735)
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465)
-	... 36 common frames omitted
-Caused by: java.lang.ClassNotFoundException: org.springframework.web.servlet.resource.LiteWebJarsResourceResolver
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528)
-	... 49 common frames omitted
-
-2025-10-26T16:45:36.257+07:00  INFO 28184 --- [SpringRestAPIHasDTODemo] [restartedMain] i.f.s.SpringRestApiHasDtoDemoApplication : Starting SpringRestApiHasDtoDemoApplication using Java 17.0.12 with PID 28184 (D:\FINAL ROUND\WWW Java\WWW_Java\SpringRestAPIHasDTODemo\SpringRestAPIHasDTODemo\target\classes started by kioma in D:\FINAL ROUND\WWW Java\WWW_Java\SpringRestAPIHasDTODemo\SpringRestAPIHasDTODemo)
-2025-10-26T16:45:36.260+07:00  INFO 28184 --- [SpringRestAPIHasDTODemo] [restartedMain] i.f.s.SpringRestApiHasDtoDemoApplication : No active profile set, falling back to 1 default profile: "default"
-2025-10-26T16:45:36.335+07:00  INFO 28184 --- [SpringRestAPIHasDTODemo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-10-26T16:45:36.336+07:00  INFO 28184 --- [SpringRestAPIHasDTODemo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-10-26T16:45:37.430+07:00  INFO 28184 --- [SpringRestAPIHasDTODemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-26T16:45:37.565+07:00  INFO 28184 --- [SpringRestAPIHasDTODemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 109 ms. Found 2 JPA repository interfaces.
-2025-10-26T16:45:38.963+07:00  INFO 28184 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2025-10-26T16:45:38.987+07:00  INFO 28184 --- [SpringRestAPIHasDTODemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-26T16:45:38.988+07:00  INFO 28184 --- [SpringRestAPIHasDTODemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
-2025-10-26T16:45:39.095+07:00  INFO 28184 --- [SpringRestAPIHasDTODemo] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
-2025-10-26T16:45:39.097+07:00  INFO 28184 --- [SpringRestAPIHasDTODemo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2760 ms
-2025-10-26T16:45:39.859+07:00  INFO 28184 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-26T16:45:39.903+07:00  INFO 28184 --- [SpringRestAPIHasDTODemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-26T16:45:40.277+07:00  WARN 28184 --- [SpringRestAPIHasDTODemo] [restartedMain] o.m.jdbc.message.server.ErrorPacket      : Error: 1045-28000: Access denied for user 'root'@'localhost' (using password: YES)
-2025-10-26T16:45:41.296+07:00 ERROR 28184 --- [SpringRestAPIHasDTODemo] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : (conn=3) Access denied for user 'root'@'localhost' (using password: YES)
-2025-10-26T16:45:41.300+07:00 ERROR 28184 --- [SpringRestAPIHasDTODemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-2025-10-26T16:45:41.302+07:00  WARN 28184 --- [SpringRestAPIHasDTODemo] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-2025-10-26T16:45:41.315+07:00  INFO 28184 --- [SpringRestAPIHasDTODemo] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2025-10-26T16:45:41.367+07:00  INFO 28184 --- [SpringRestAPIHasDTODemo] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-10-26T16:45:41.391+07:00 ERROR 28184 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at iuh.fit.se.SpringRestApiHasDtoDemoApplication.main(SpringRestApiHasDtoDemoApplication.java:10)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
-	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
-	... 20 common frames omitted
-Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191)
-	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:153)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:364)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:124)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:78)
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
-	... 35 common frames omitted
-
-2025-10-26T16:47:08.743+07:00  INFO 27804 --- [SpringRestAPIHasDTODemo] [restartedMain] i.f.s.SpringRestApiHasDtoDemoApplication : Starting SpringRestApiHasDtoDemoApplication using Java 23.0.1 with PID 27804 (D:\FINAL ROUND\WWW Java\WWW_Java\SpringRestAPIHasDTODemo\SpringRestAPIHasDTODemo\target\classes started by kioma in D:\FINAL ROUND\WWW Java\WWW_Java\SpringRestAPIHasDTODemo\SpringRestAPIHasDTODemo)
-2025-10-26T16:47:08.745+07:00  INFO 27804 --- [SpringRestAPIHasDTODemo] [restartedMain] i.f.s.SpringRestApiHasDtoDemoApplication : No active profile set, falling back to 1 default profile: "default"
-2025-10-26T16:47:08.822+07:00  INFO 27804 --- [SpringRestAPIHasDTODemo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-10-26T16:47:08.823+07:00  INFO 27804 --- [SpringRestAPIHasDTODemo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-10-26T16:47:09.915+07:00  WARN 27804 --- [SpringRestAPIHasDTODemo] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalStateException: Error processing condition on org.springdoc.webmvc.ui.SwaggerConfig.springWebProvider
-2025-10-26T16:47:09.925+07:00  INFO 27804 --- [SpringRestAPIHasDTODemo] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-10-26T16:47:09.957+07:00 ERROR 27804 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-java.lang.IllegalStateException: Error processing condition on org.springdoc.webmvc.ui.SwaggerConfig.springWebProvider
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60)
-	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:183)
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:144)
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:429)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:789)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:607)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at iuh.fit.se.SpringRestApiHasDtoDemoApplication.main(SpringRestApiHasDtoDemoApplication.java:10)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springdoc.webmvc.ui.SwaggerConfig] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@5a07e868]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483)
-	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360)
-	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$1(AbstractAutowireCapableBeanFactory.java:750)
-	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1713)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:749)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:682)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:653)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1687)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:562)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:534)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:247)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:240)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:230)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:183)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:158)
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
-	... 20 common frames omitted
-Caused by: java.lang.NoClassDefFoundError: org/springframework/web/servlet/resource/LiteWebJarsResourceResolver
-	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
-	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1026)
-	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528)
-	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
-	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3650)
-	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2735)
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465)
-	... 36 common frames omitted
-Caused by: java.lang.ClassNotFoundException: org.springframework.web.servlet.resource.LiteWebJarsResourceResolver
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528)
-	... 49 common frames omitted
-
-2025-10-26T16:48:54.283+07:00  INFO 24424 --- [SpringRestAPIHasDTODemo] [restartedMain] i.f.s.SpringRestApiHasDtoDemoApplication : Starting SpringRestApiHasDtoDemoApplication using Java 23.0.1 with PID 24424 (D:\FINAL ROUND\WWW Java\WWW_Java\SpringRestAPIHasDTODemo\SpringRestAPIHasDTODemo\target\classes started by kioma in D:\FINAL ROUND\WWW Java\WWW_Java\SpringRestAPIHasDTODemo\SpringRestAPIHasDTODemo)
-2025-10-26T16:48:54.285+07:00  INFO 24424 --- [SpringRestAPIHasDTODemo] [restartedMain] i.f.s.SpringRestApiHasDtoDemoApplication : No active profile set, falling back to 1 default profile: "default"
-2025-10-26T16:48:54.365+07:00  INFO 24424 --- [SpringRestAPIHasDTODemo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-10-26T16:48:54.366+07:00  INFO 24424 --- [SpringRestAPIHasDTODemo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-10-26T16:48:55.330+07:00  WARN 24424 --- [SpringRestAPIHasDTODemo] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalStateException: Error processing condition on org.springdoc.webmvc.ui.SwaggerConfig.springWebProvider
-2025-10-26T16:48:55.341+07:00  INFO 24424 --- [SpringRestAPIHasDTODemo] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-10-26T16:48:55.368+07:00 ERROR 24424 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-java.lang.IllegalStateException: Error processing condition on org.springdoc.webmvc.ui.SwaggerConfig.springWebProvider
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60)
-	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:183)
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:144)
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:429)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:789)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:607)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at iuh.fit.se.SpringRestApiHasDtoDemoApplication.main(SpringRestApiHasDtoDemoApplication.java:10)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springdoc.webmvc.ui.SwaggerConfig] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@5a07e868]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483)
-	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360)
-	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$1(AbstractAutowireCapableBeanFactory.java:750)
-	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1745)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:749)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:682)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:653)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1687)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:562)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:534)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:247)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:240)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:230)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:183)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:158)
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
-	... 20 common frames omitted
-Caused by: java.lang.NoClassDefFoundError: org/springframework/web/servlet/resource/LiteWebJarsResourceResolver
-	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
-	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1026)
-	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528)
-	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
-	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3650)
-	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2735)
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465)
-	... 36 common frames omitted
-Caused by: java.lang.ClassNotFoundException: org.springframework.web.servlet.resource.LiteWebJarsResourceResolver
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528)
-	... 49 common frames omitted
-
-2025-10-26T16:49:03.579+07:00  INFO 19548 --- [SpringRestAPIHasDTODemo] [restartedMain] i.f.s.SpringRestApiHasDtoDemoApplication : Starting SpringRestApiHasDtoDemoApplication using Java 23.0.1 with PID 19548 (D:\FINAL ROUND\WWW Java\WWW_Java\SpringRestAPIHasDTODemo\SpringRestAPIHasDTODemo\target\classes started by kioma in D:\FINAL ROUND\WWW Java\WWW_Java\SpringRestAPIHasDTODemo\SpringRestAPIHasDTODemo)
-2025-10-26T16:49:03.581+07:00  INFO 19548 --- [SpringRestAPIHasDTODemo] [restartedMain] i.f.s.SpringRestApiHasDtoDemoApplication : No active profile set, falling back to 1 default profile: "default"
-2025-10-26T16:49:03.659+07:00  INFO 19548 --- [SpringRestAPIHasDTODemo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-10-26T16:49:03.659+07:00  INFO 19548 --- [SpringRestAPIHasDTODemo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-10-26T16:49:04.626+07:00  WARN 19548 --- [SpringRestAPIHasDTODemo] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalStateException: Error processing condition on org.springdoc.webmvc.ui.SwaggerConfig.springWebProvider
-2025-10-26T16:49:04.633+07:00  INFO 19548 --- [SpringRestAPIHasDTODemo] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-10-26T16:49:04.661+07:00 ERROR 19548 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-java.lang.IllegalStateException: Error processing condition on org.springdoc.webmvc.ui.SwaggerConfig.springWebProvider
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60)
-	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:183)
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:144)
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:429)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:789)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:607)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at iuh.fit.se.SpringRestApiHasDtoDemoApplication.main(SpringRestApiHasDtoDemoApplication.java:10)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springdoc.webmvc.ui.SwaggerConfig] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@5a07e868]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483)
-	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360)
-	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$1(AbstractAutowireCapableBeanFactory.java:750)
-	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1713)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:749)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:682)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:653)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1687)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:562)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:534)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:247)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:240)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:230)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:183)
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:158)
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
-	... 20 common frames omitted
-Caused by: java.lang.NoClassDefFoundError: org/springframework/web/servlet/resource/LiteWebJarsResourceResolver
-	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
-	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1026)
-	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528)
-	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
-	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3650)
-	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2735)
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465)
-	... 36 common frames omitted
-Caused by: java.lang.ClassNotFoundException: org.springframework.web.servlet.resource.LiteWebJarsResourceResolver
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528)
-	... 49 common frames omitted
-
-2025-10-26T16:51:32.748+07:00  INFO 28120 --- [SpringRestAPIHasDTODemo] [main] .SpringRestApiHasDtoDemoApplicationTests : Starting SpringRestApiHasDtoDemoApplicationTests using Java 17.0.12 with PID 28120 (started by kioma in D:\FINAL ROUND\WWW Java\WWW_Java\SpringRestAPIHasDTODemo\SpringRestAPIHasDTODemo)
-2025-10-26T16:51:32.752+07:00  INFO 28120 --- [SpringRestAPIHasDTODemo] [main] .SpringRestApiHasDtoDemoApplicationTests : No active profile set, falling back to 1 default profile: "default"
-2025-10-26T16:51:32.800+07:00 DEBUG 28120 --- [SpringRestAPIHasDTODemo] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@22101c80
-2025-10-26T16:51:34.237+07:00  INFO 28120 --- [SpringRestAPIHasDTODemo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-26T16:51:34.336+07:00  INFO 28120 --- [SpringRestAPIHasDTODemo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 2 JPA repository interfaces.
-2025-10-26T16:51:36.168+07:00  INFO 28120 --- [SpringRestAPIHasDTODemo] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-26T16:51:36.240+07:00  INFO 28120 --- [SpringRestAPIHasDTODemo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-26T16:51:36.524+07:00  INFO 28120 --- [SpringRestAPIHasDTODemo] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@6249a08d
-2025-10-26T16:51:36.527+07:00  INFO 28120 --- [SpringRestAPIHasDTODemo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-26T16:51:38.165+07:00  INFO 28120 --- [SpringRestAPIHasDTODemo] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-26T16:51:38.757+07:00  INFO 28120 --- [SpringRestAPIHasDTODemo] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-10-26T16:51:39.773+07:00  WARN 28120 --- [SpringRestAPIHasDTODemo] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-26T16:51:39.928+07:00 DEBUG 28120 --- [SpringRestAPIHasDTODemo] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 12 mappings in 'requestMappingHandlerMapping'
-2025-10-26T16:51:40.134+07:00 DEBUG 28120 --- [SpringRestAPIHasDTODemo] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2025-10-26T16:51:40.212+07:00 DEBUG 28120 --- [SpringRestAPIHasDTODemo] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2025-10-26T16:51:40.289+07:00 DEBUG 28120 --- [SpringRestAPIHasDTODemo] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2025-10-26T16:51:40.533+07:00  INFO 28120 --- [SpringRestAPIHasDTODemo] [main] .SpringRestApiHasDtoDemoApplicationTests : Started SpringRestApiHasDtoDemoApplicationTests in 8.476 seconds (process running for 10.538)
-2025-10-26T16:51:41.462+07:00 DEBUG 28120 --- [SpringRestAPIHasDTODemo] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@22101c80, started on Sun Oct 26 16:51:32 ICT 2025
-2025-10-26T16:51:41.469+07:00  INFO 28120 --- [SpringRestAPIHasDTODemo] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-10-26T16:51:41.478+07:00  INFO 28120 --- [SpringRestAPIHasDTODemo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-10-26T16:51:41.486+07:00  INFO 28120 --- [SpringRestAPIHasDTODemo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-10-26T16:54:15.308+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [restartedMain] i.f.s.SpringRestApiHasDtoDemoApplication : Starting SpringRestApiHasDtoDemoApplication using Java 23.0.1 with PID 21260 (D:\FINAL ROUND\WWW Java\WWW_Java\SpringRestAPIHasDTODemo\SpringRestAPIHasDTODemo\target\classes started by kioma in D:\FINAL ROUND\WWW Java\WWW_Java\SpringRestAPIHasDTODemo\SpringRestAPIHasDTODemo)
-2025-10-26T16:54:15.310+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [restartedMain] i.f.s.SpringRestApiHasDtoDemoApplication : No active profile set, falling back to 1 default profile: "default"
-2025-10-26T16:54:15.410+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-10-26T16:54:15.410+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-10-26T16:54:16.764+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-26T16:54:16.868+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 2 JPA repository interfaces.
-2025-10-26T16:54:17.868+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2025-10-26T16:54:17.890+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-26T16:54:17.891+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
-2025-10-26T16:54:18.029+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
-2025-10-26T16:54:18.030+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2619 ms
-2025-10-26T16:54:18.803+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-26T16:54:18.863+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-26T16:54:19.023+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@36de3fbe
-2025-10-26T16:54:19.027+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-26T16:54:20.713+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-26T16:54:21.124+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-10-26T16:54:22.097+07:00  WARN 21260 --- [SpringRestAPIHasDTODemo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-26T16:54:22.269+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 12 mappings in 'requestMappingHandlerMapping'
-2025-10-26T16:54:22.395+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2025-10-26T16:54:22.439+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2025-10-26T16:54:22.480+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2025-10-26T16:54:22.773+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-10-26T16:54:22.866+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/api'
-2025-10-26T16:54:22.884+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [restartedMain] i.f.s.SpringRestApiHasDtoDemoApplication : Started SpringRestApiHasDtoDemoApplication in 8.492 seconds (process running for 10.048)
-2025-10-26T16:54:41.085+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-26T16:54:41.085+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-10-26T16:54:41.086+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2025-10-26T16:54:41.086+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
-2025-10-26T16:54:41.086+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
-2025-10-26T16:54:41.088+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@491ffc70
-2025-10-26T16:54:41.089+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@13066e79
-2025-10-26T16:54:41.091+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2025-10-26T16:54:41.091+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2025-10-26T16:54:41.105+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/swagger-ui/index.html", parameters={}
-2025-10-26T16:54:41.152+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2025-10-26T16:54:41.208+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T16:54:41.274+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/swagger-ui/swagger-ui.css", parameters={}
-2025-10-26T16:54:41.278+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2025-10-26T16:54:41.280+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/swagger-ui/index.css", parameters={}
-2025-10-26T16:54:41.282+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2025-10-26T16:54:41.281+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/swagger-ui/swagger-ui-standalone-preset.js", parameters={}
-2025-10-26T16:54:41.284+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2025-10-26T16:54:41.284+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/swagger-ui/swagger-ui-bundle.js", parameters={}
-2025-10-26T16:54:41.286+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/swagger-ui/swagger-initializer.js", parameters={}
-2025-10-26T16:54:41.286+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2025-10-26T16:54:41.290+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T16:54:41.292+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2025-10-26T16:54:41.292+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T16:54:41.305+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T16:54:41.340+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T16:54:41.358+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T16:54:41.600+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/v3/api-docs/swagger-config", parameters={}
-2025-10-26T16:54:41.604+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
-2025-10-26T16:54:41.612+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/swagger-ui/favicon-32x32.png", parameters={}
-2025-10-26T16:54:41.614+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2025-10-26T16:54:41.620+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T16:54:41.638+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
-2025-10-26T16:54:41.641+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [{configUrl=/api/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:8081/api/swagger-ui/o (truncated)...]
-2025-10-26T16:54:41.650+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T16:54:41.663+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/v3/api-docs", parameters={}
-2025-10-26T16:54:41.664+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
-2025-10-26T16:54:42.177+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 496 ms
-2025-10-26T16:54:42.248+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, */*] and supported [application/json]
-2025-10-26T16:54:42.251+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 48, 46, 49, 34, 44, 34, 105, 110, 10 (truncated)...]
-2025-10-26T16:54:42.252+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T17:09:59.817+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/", parameters={}
-2025-10-26T17:09:59.837+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2025-10-26T17:09:59.857+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
-2025-10-26T17:09:59.878+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler iuh.fit.se.exceptions.GlobalExceptionHandler#handleException(Exception, WebRequest)
-2025-10-26T17:09:59.911+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] and supported [application/problem+json]
-2025-10-26T17:09:59.923+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='about:blank', title='Not Found', status=404, detail='No static resource .', inst (truncated)...]
-2025-10-26T17:09:59.926+07:00  WARN 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .]
-2025-10-26T17:09:59.928+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
-2025-10-26T17:11:30.457+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/employees", parameters={}
-2025-10-26T17:11:30.465+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(String)
-2025-10-26T17:11:31.441+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
-2025-10-26T17:11:31.441+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[]}]
-2025-10-26T17:11:31.451+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T17:11:57.853+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : POST "/api/employees", parameters={}
-2025-10-26T17:11:57.853+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#saveEmployee(Employee)
-2025-10-26T17:11:57.961+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Employee [id=0, firstName=, lastName=, gender=null, emailAddress=, phoneNumber=, dob=null, createdDa (truncated)...]
-2025-10-26T17:11:58.433+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
-2025-10-26T17:11:58.433+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=iuh.fit.se.dtos.EmployeeDTO@6627b98e}]
-2025-10-26T17:11:58.443+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T17:11:58.478+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/employees", parameters={}
-2025-10-26T17:11:58.481+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(String)
-2025-10-26T17:11:58.517+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
-2025-10-26T17:11:58.517+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[iuh.fit.se.dtos.EmployeeDTO@5f59fe62]}]
-2025-10-26T17:11:58.527+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T17:12:26.869+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/employees", parameters={}
-2025-10-26T17:12:26.871+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#saveEmployee(Employee)
-2025-10-26T17:12:26.884+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Employee [id=0, firstName=aa, lastName=bb, gender=male, emailAddress=khanhdinh.job@gmail.com, phoneN (truncated)...]
-2025-10-26T17:12:26.925+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
-2025-10-26T17:12:26.926+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=iuh.fit.se.dtos.EmployeeDTO@4672881a}]
-2025-10-26T17:12:26.926+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T17:12:26.951+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/employees", parameters={}
-2025-10-26T17:12:26.957+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(String)
-2025-10-26T17:12:26.971+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
-2025-10-26T17:12:26.971+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[iuh.fit.se.dtos.EmployeeDTO@7aaa8dce, iuh.fit.se.dtos.EmployeeDTO@16da7e72]}]
-2025-10-26T17:12:26.975+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T17:14:11.911+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/employees", parameters={}
-2025-10-26T17:14:11.913+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(String)
-2025-10-26T17:14:11.936+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
-2025-10-26T17:14:11.936+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[iuh.fit.se.dtos.EmployeeDTO@63353c5c, iuh.fit.se.dtos.EmployeeDTO@4ff1125e]}]
-2025-10-26T17:14:11.941+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T17:17:09.119+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/employees", parameters={}
-2025-10-26T17:17:09.119+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(String)
-2025-10-26T17:17:09.137+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
-2025-10-26T17:17:09.142+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[iuh.fit.se.dtos.EmployeeDTO@1cb1e8b6, iuh.fit.se.dtos.EmployeeDTO@324361a7]}]
-2025-10-26T17:17:09.143+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T17:21:49.263+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/employees", parameters={}
-2025-10-26T17:21:49.265+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(String)
-2025-10-26T17:21:49.281+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
-2025-10-26T17:21:49.282+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[iuh.fit.se.dtos.EmployeeDTO@33b3a84, iuh.fit.se.dtos.EmployeeDTO@18d5487]}]
-2025-10-26T17:21:49.284+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T17:22:01.377+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/employees/2", parameters={}
-2025-10-26T17:22:01.403+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployeeById(int)
-2025-10-26T17:22:02.268+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
-2025-10-26T17:22:02.268+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=iuh.fit.se.dtos.EmployeeDTO@5ec37bba}]
-2025-10-26T17:22:02.281+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T17:22:07.507+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/employees", parameters={}
-2025-10-26T17:22:07.510+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(String)
-2025-10-26T17:22:07.527+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
-2025-10-26T17:22:07.529+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[iuh.fit.se.dtos.EmployeeDTO@2dbd2483, iuh.fit.se.dtos.EmployeeDTO@569d8681]}]
-2025-10-26T17:22:07.532+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T17:22:13.673+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : DELETE "/api/employees/1", parameters={}
-2025-10-26T17:22:13.680+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#deleteEmployee(int)
-2025-10-26T17:22:13.828+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
-2025-10-26T17:22:13.833+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=true}]
-2025-10-26T17:22:13.836+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T17:22:13.869+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/employees", parameters={}
-2025-10-26T17:22:13.873+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(String)
-2025-10-26T17:22:13.885+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
-2025-10-26T17:22:13.887+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[iuh.fit.se.dtos.EmployeeDTO@d305e71]}]
-2025-10-26T17:22:13.887+07:00 DEBUG 21260 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-10-26T18:52:14.370+07:00  WARN 21260 --- [SpringRestAPIHasDTODemo] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h25m53s67ms343µs800ns).
-2025-10-26T18:57:30.505+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-10-26T18:57:30.535+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-10-26T18:57:30.548+07:00  INFO 21260 --- [SpringRestAPIHasDTODemo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-29T20:00:03.530+07:00  INFO 34324 --- [SpringRestAPIHasDTODemo] [restartedMain] i.f.s.SpringRestApiHasDtoDemoApplication : Starting SpringRestApiHasDtoDemoApplication using Java 23.0.1 with PID 34324 (D:\FINAL ROUND\WWW Java\WWW_Java\DinhQuocKhanh_21096081_WWW_T9\SpringRestAPIHasDTODemo\target\classes started by kioma in D:\FINAL ROUND\WWW Java\WWW_Java\DinhQuocKhanh_21096081_WWW_T9\SpringRestAPIHasDTODemo)
+2025-10-29T20:00:03.538+07:00  INFO 34324 --- [SpringRestAPIHasDTODemo] [restartedMain] i.f.s.SpringRestApiHasDtoDemoApplication : No active profile set, falling back to 1 default profile: "default"
+2025-10-29T20:00:03.605+07:00  INFO 34324 --- [SpringRestAPIHasDTODemo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-29T20:00:03.613+07:00  INFO 34324 --- [SpringRestAPIHasDTODemo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-29T20:00:04.430+07:00  INFO 34324 --- [SpringRestAPIHasDTODemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-29T20:00:04.482+07:00  INFO 34324 --- [SpringRestAPIHasDTODemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 2 JPA repository interfaces.
+2025-10-29T20:00:05.053+07:00  INFO 34324 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-10-29T20:00:05.066+07:00  INFO 34324 --- [SpringRestAPIHasDTODemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-29T20:00:05.066+07:00  INFO 34324 --- [SpringRestAPIHasDTODemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-10-29T20:00:05.114+07:00  INFO 34324 --- [SpringRestAPIHasDTODemo] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-10-29T20:00:05.116+07:00  INFO 34324 --- [SpringRestAPIHasDTODemo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1502 ms
+2025-10-29T20:00:05.571+07:00  INFO 34324 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-29T20:00:05.593+07:00  INFO 34324 --- [SpringRestAPIHasDTODemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-29T20:00:05.679+07:00  INFO 34324 --- [SpringRestAPIHasDTODemo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@454c0aee
+2025-10-29T20:00:05.680+07:00  INFO 34324 --- [SpringRestAPIHasDTODemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-29T20:00:06.803+07:00  INFO 34324 --- [SpringRestAPIHasDTODemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-29T20:00:07.125+07:00  INFO 34324 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-29T20:00:07.731+07:00  WARN 34324 --- [SpringRestAPIHasDTODemo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-29T20:00:07.830+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 12 mappings in 'requestMappingHandlerMapping'
+2025-10-29T20:00:07.908+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-10-29T20:00:07.944+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-29T20:00:07.980+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-29T20:00:08.169+07:00  INFO 34324 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-29T20:00:08.211+07:00  INFO 34324 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/api'
+2025-10-29T20:00:08.221+07:00  INFO 34324 --- [SpringRestAPIHasDTODemo] [restartedMain] i.f.s.SpringRestApiHasDtoDemoApplication : Started SpringRestApiHasDtoDemoApplication in 5.182 seconds (process running for 5.952)
+2025-10-29T20:04:31.439+07:00  INFO 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-29T20:04:31.441+07:00  INFO 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-29T20:04:31.443+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-10-29T20:04:31.444+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-10-29T20:04:31.445+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-10-29T20:04:31.454+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7cd2576f
+2025-10-29T20:04:31.454+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@2b69bba8
+2025-10-29T20:04:31.455+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-10-29T20:04:31.456+07:00  INFO 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2025-10-29T20:04:31.480+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/employee", parameters={}
+2025-10-29T20:04:31.502+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-29T20:04:31.529+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-10-29T20:04:31.540+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler iuh.fit.se.exceptions.GlobalExceptionHandler#handleException(Exception, WebRequest)
+2025-10-29T20:04:31.699+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] and supported [application/problem+json]
+2025-10-29T20:04:31.711+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='about:blank', title='Not Found', status=404, detail='No static resource employee (truncated)...]
+2025-10-29T20:04:31.742+07:00  WARN 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource employee.]
+2025-10-29T20:04:31.744+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-29T20:04:39.456+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/employees", parameters={}
+2025-10-29T20:04:39.462+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(String)
+2025-10-29T20:04:39.782+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2025-10-29T20:04:39.782+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[]}]
+2025-10-29T20:04:39.790+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-29T20:05:23.423+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/employees", parameters={}
+2025-10-29T20:05:23.425+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(String)
+2025-10-29T20:05:23.436+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2025-10-29T20:05:23.437+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[]}]
+2025-10-29T20:05:23.441+07:00 DEBUG 34324 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-29T20:08:35.823+07:00  INFO 34324 --- [SpringRestAPIHasDTODemo] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-29T20:08:35.827+07:00  INFO 34324 --- [SpringRestAPIHasDTODemo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-29T20:08:35.833+07:00  INFO 34324 --- [SpringRestAPIHasDTODemo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-29T20:08:39.320+07:00  INFO 20296 --- [SpringRestAPIHasDTODemo] [restartedMain] i.f.s.SpringRestApiHasDtoDemoApplication : Starting SpringRestApiHasDtoDemoApplication using Java 23.0.1 with PID 20296 (D:\FINAL ROUND\WWW Java\WWW_Java\DinhQuocKhanh_21096081_WWW_T9\SpringRestAPIHasDTODemo\target\classes started by kioma in D:\FINAL ROUND\WWW Java\WWW_Java\DinhQuocKhanh_21096081_WWW_T9\SpringRestAPIHasDTODemo)
+2025-10-29T20:08:39.322+07:00  INFO 20296 --- [SpringRestAPIHasDTODemo] [restartedMain] i.f.s.SpringRestApiHasDtoDemoApplication : No active profile set, falling back to 1 default profile: "default"
+2025-10-29T20:08:39.375+07:00  INFO 20296 --- [SpringRestAPIHasDTODemo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-29T20:08:39.375+07:00  INFO 20296 --- [SpringRestAPIHasDTODemo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-29T20:08:40.243+07:00  INFO 20296 --- [SpringRestAPIHasDTODemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-29T20:08:40.312+07:00  INFO 20296 --- [SpringRestAPIHasDTODemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 2 JPA repository interfaces.
+2025-10-29T20:08:40.938+07:00  INFO 20296 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-10-29T20:08:40.954+07:00  INFO 20296 --- [SpringRestAPIHasDTODemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-29T20:08:40.955+07:00  INFO 20296 --- [SpringRestAPIHasDTODemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-10-29T20:08:41.015+07:00  INFO 20296 --- [SpringRestAPIHasDTODemo] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-10-29T20:08:41.016+07:00  INFO 20296 --- [SpringRestAPIHasDTODemo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1639 ms
+2025-10-29T20:08:41.614+07:00  INFO 20296 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-29T20:08:41.654+07:00  INFO 20296 --- [SpringRestAPIHasDTODemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-29T20:08:41.738+07:00  INFO 20296 --- [SpringRestAPIHasDTODemo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@1d007e78
+2025-10-29T20:08:41.740+07:00  INFO 20296 --- [SpringRestAPIHasDTODemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-29T20:08:42.949+07:00  INFO 20296 --- [SpringRestAPIHasDTODemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-29T20:08:43.282+07:00  INFO 20296 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-29T20:08:43.981+07:00  WARN 20296 --- [SpringRestAPIHasDTODemo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-29T20:08:44.080+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 12 mappings in 'requestMappingHandlerMapping'
+2025-10-29T20:08:44.235+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-10-29T20:08:44.267+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-29T20:08:44.296+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-29T20:08:44.491+07:00  INFO 20296 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-29T20:08:44.560+07:00  INFO 20296 --- [SpringRestAPIHasDTODemo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/api'
+2025-10-29T20:08:44.582+07:00  INFO 20296 --- [SpringRestAPIHasDTODemo] [restartedMain] i.f.s.SpringRestApiHasDtoDemoApplication : Started SpringRestApiHasDtoDemoApplication in 5.789 seconds (process running for 6.594)
+2025-10-29T20:09:30.233+07:00  INFO 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-29T20:09:30.234+07:00  INFO 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-29T20:09:30.234+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-10-29T20:09:30.234+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-10-29T20:09:30.235+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-10-29T20:09:30.236+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@76bd0b22
+2025-10-29T20:09:30.236+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@13c085a8
+2025-10-29T20:09:30.237+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-10-29T20:09:30.237+07:00  INFO 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-10-29T20:09:30.247+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/employees", parameters={}
+2025-10-29T20:09:30.266+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(String)
+2025-10-29T20:09:30.420+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2025-10-29T20:09:30.423+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[]}]
+2025-10-29T20:09:30.444+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-29T20:09:32.589+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/employees", parameters={}
+2025-10-29T20:09:32.589+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(String)
+2025-10-29T20:09:32.595+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2025-10-29T20:09:32.595+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[]}]
+2025-10-29T20:09:32.597+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-29T20:10:09.300+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/employees", parameters={}
+2025-10-29T20:10:09.300+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(String)
+2025-10-29T20:10:09.306+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2025-10-29T20:10:09.306+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[]}]
+2025-10-29T20:10:09.308+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-29T20:10:22.791+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/employees", parameters={}
+2025-10-29T20:10:22.792+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(String)
+2025-10-29T20:10:22.798+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2025-10-29T20:10:22.799+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[]}]
+2025-10-29T20:10:22.799+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-29T20:11:50.475+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/employees", parameters={}
+2025-10-29T20:11:50.477+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(String)
+2025-10-29T20:11:50.493+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2025-10-29T20:11:50.495+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[]}]
+2025-10-29T20:11:50.497+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-29T20:11:55.294+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/employees", parameters={}
+2025-10-29T20:11:55.294+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(String)
+2025-10-29T20:11:55.306+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-29T20:11:55.307+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[]}]
+2025-10-29T20:11:55.309+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-29T20:12:16.747+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/employees", parameters={}
+2025-10-29T20:12:16.749+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#saveEmployee(Employee)
+2025-10-29T20:12:16.913+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Employee [id=0, firstName=khanh, lastName=dinh, gender=male, emailAddress=khanhdinh.job@gmail.com, p (truncated)...]
+2025-10-29T20:12:17.128+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-29T20:12:17.129+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=iuh.fit.se.dtos.EmployeeDTO@7ee7d8da}]
+2025-10-29T20:12:17.163+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-29T20:12:17.190+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/employees", parameters={}
+2025-10-29T20:12:17.191+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(String)
+2025-10-29T20:12:17.208+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-29T20:12:17.209+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[iuh.fit.se.dtos.EmployeeDTO@1cd884b0]}]
+2025-10-29T20:12:17.215+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-29T20:12:31.953+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/employees/1", parameters={}
+2025-10-29T20:12:31.954+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployeeById(int)
+2025-10-29T20:12:32.017+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-29T20:12:32.018+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=iuh.fit.se.dtos.EmployeeDTO@66ec74af}]
+2025-10-29T20:12:32.020+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-29T20:13:11.792+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : DELETE "/api/employees/1", parameters={}
+2025-10-29T20:13:11.794+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#deleteEmployee(int)
+2025-10-29T20:13:11.850+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-29T20:13:11.851+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=true}]
+2025-10-29T20:13:11.854+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-29T20:13:11.878+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/employees", parameters={}
+2025-10-29T20:13:11.878+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to iuh.fit.se.controllers.EmployeeController#getEmployees(String)
+2025-10-29T20:13:11.885+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-29T20:13:11.885+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[]}]
+2025-10-29T20:13:11.887+07:00 DEBUG 20296 --- [SpringRestAPIHasDTODemo] [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-29T20:25:01.754+07:00  INFO 20296 --- [SpringRestAPIHasDTODemo] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-29T20:25:01.762+07:00  INFO 20296 --- [SpringRestAPIHasDTODemo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-29T20:25:01.776+07:00  INFO 20296 --- [SpringRestAPIHasDTODemo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
